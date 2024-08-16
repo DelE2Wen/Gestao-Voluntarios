@@ -1,10 +1,11 @@
 const {Sequelize} = require('sequelize');
 
-const sequelize = new Sequelize ('sistemagestaovoluntarios', 'root', '', {
+const sequelize = new Sequelize ('papoflow', 'root', '', {
   host: 'localhost',
   dialect: 'mysql',
 });
 
+//ping para verificar se funciona
 async function mainDB() {
   try {
     await sequelize.authenticate();
