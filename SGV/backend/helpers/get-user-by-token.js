@@ -14,6 +14,9 @@ const getUserByToken = async (token) => {
   const userId = decoded.id
 
   const user = await User.findOne({where:{id: userId}});
+  if (!user) {
+    throw new Error('Usuário não encontrado!');
+  }
   return user;
 }
 

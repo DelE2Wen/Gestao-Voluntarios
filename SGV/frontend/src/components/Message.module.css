@@ -1,0 +1,27 @@
+.chat {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.chatContent {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.messageStyle{
+  background-color: #8e9382;
+  padding: 8px 16px;
+  border-radius: 16px;
+}
+.chatAvatar{
+  font-size: 22px;
+}
+
+.chatFooter {
+  opacity: 0.5;
+  font-size: 1rem;
+  display: flex;
+  gap: 4px;
+  padding: 3px 0 0 30px;
+}

@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  height: 25px;
+  padding: 50px 4px;
+  border-bottom: 1px solid rgba(120, 120, 120, 0.2);
+}
+.container:hover{
+  background-color: #F0F0EE; 
+}
+.avatar {
+  font-size: 20px;
+  display: flex;
+}
+.containerName{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.containerInfo {
+  display: flex;
+  justify-content: space-between;
+}

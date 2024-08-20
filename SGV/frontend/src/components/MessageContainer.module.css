@@ -1,0 +1,15 @@
+.container {
+  width: 350px;
+  display: flex;
+  padding: 20px 15px;
+  border-radius: 0 10px 0 0px;
+  gap: 8px;
+  background-color: #dee0d9;
+}
+.span {
+  color:#8f9382
+}
+.name {
+  color: #1f201d;
+  font-weight: bold;
+}

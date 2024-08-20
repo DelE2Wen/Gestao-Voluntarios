@@ -98,7 +98,7 @@ module.exports = class UserController {
       res.status(422).json({message: 'Senha inválida'});
       return;
     }
-    await createUserToken(verifyUser, res, res);
+    await createUserToken(verifyUser, req, res);
   }
 
   static async checkUser(req,res) {
@@ -221,6 +221,28 @@ module.exports = class UserController {
     } catch (error) {
       res.status(500).json({message: error});
       return;
+    }
+  }
+  static async logout(req, res) {
+    res.status(200).json({ message: 'Logout realizado com sucesso' });
+  }
+  static async deleteUser(req, res) {
+    const token = getToken(req);
+    const user = await getUserByToken(token);
+
+    if (!user) {
+      res.status(422).json({ message: 'Usuário não encontrado' });
+      return;
+    }
+
+    try {
+      await User.destroy({
+        where: { id: user.id }
+      });
+
+      res.status(200).json({ message: 'Usuário excluído com sucesso' });
+    } catch (error) {
+      res.status(500).json({ message: 'Erro ao excluir o usuário' });
     }
   }
 }

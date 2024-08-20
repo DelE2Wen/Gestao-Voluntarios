@@ -1,0 +1,5 @@
+.container {
+  display: flex;
+  background-color: #E5E6E2;
+  border-radius: 10px;
+}
